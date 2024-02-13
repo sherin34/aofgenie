@@ -100,19 +100,19 @@ splitTextIntoShortBoxes(req.body.gst,"gst")
 splitTextIntoShortBoxes(req.body.cin,"cin")
 splitTextIntoShortBoxes(req.body.pan,"pan")
 
-// form.getTextField("address1AOF").setText(addSpacesAfterCharactersAOF(req.body.address1));
-// form.getTextField("address2AOF").setText(addSpacesAfterCharactersAOF(req.body.address2));
-// form.getTextField("address3AOF").setText(addSpacesAfterCharactersAOF(req.body.address3));
-// form.getTextField("cityAOF").setText(addSpacesAfterCharactersAOF(req.body.city));
+form.getTextField("address1AOF").setText(addSpacesAfterCharactersAOF(req.body.address1));
+form.getTextField("address2AOF").setText(addSpacesAfterCharactersAOF(req.body.address2));
+form.getTextField("address3AOF").setText(addSpacesAfterCharactersAOF(req.body.address3));
+form.getTextField("cityAOF").setText(addSpacesAfterCharactersAOF(req.body.city));
 
-// form.getTextField("stateAOF").setText(addSpacesAfterCharactersAOF(req.body.state));
-// form.getTextField("pinAOF").setText(addSpacesAfterCharactersAOF(req.body.pin));
-// form.getTextField("mobileAOF").setText(addSpacesAfterCharactersAOF(req.body.mobile));
-// form.getTextField("emailAOF").setText(addSpacesAfterCharactersAOF(req.body.email));
+form.getTextField("stateAOF").setText(addSpacesAfterCharactersAOF(req.body.state));
+form.getTextField("pinAOF").setText(addSpacesAfterCharactersAOF(req.body.pin));
+form.getTextField("mobileAOF").setText(addSpacesAfterCharactersAOF(req.body.mobile));
+form.getTextField("emailAOF").setText(addSpacesAfterCharactersAOF(req.body.email));
 // form.getTextField("gstAOF").setText(addSpacesAfterCharactersAOF(req.body.gst));
 // form.getTextField("cinAOF").setText(addSpacesAfterCharactersAOF(req.body.cin));
 
-// form.getTextField("panAOF").setText(addSpacesAfterCharactersAOF(req.body.pan));
+form.getTextField("panAOF").setText(addSpacesAfterCharactersAOF(req.body.pan));
 if(req.body.gst!==""){
   form.getTextField("identificationFatca").setText(addSpacesAfterCharactersAOF(req.body.gst));
 }else{
