@@ -1,0 +1,734 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Add custom styles here if needed */
+
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>{{title}}</h1>
+      <p>Welcome to {{title}}</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Form</h1>
+          <form action="/submit-form" method="POST">
+            <div class="form-group">
+              <label for="branchName">Branch Name:</label>
+              <input
+                type="text"
+                id="branchName"
+                name="branchName"
+                class="form-control"
+                value="CHANGANACHERRY MC ROAD"
+              />
+            </div>
+            <div class="form-group">
+              <label for="branchCode">Branch Code:</label>
+              <input
+                type="text"
+                id="branchCode"
+                name="branchCode"
+                class="form-control"
+                value="0340"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="scheme">Scheme:</label><br />
+              <input type="radio" name="scheme" value="CApremium" />
+              CA Premium<br />
+              <input type="radio" name="scheme" value="CASmart" />
+              CA Smart<br />
+              <input type="radio" name="scheme" value="CATraderSmart" />
+              CA Trader Smart<br />
+              <input type="radio" name="scheme" value="CAOthers" checked />
+              CA Others<br />
+              <input
+                type="text"
+                id="schemeOthersExpanded"
+                name="schemeOthersExpanded"
+                placeholder="Other schemes"
+                class="form-control"
+                value="MERCHANT PLUS"
+              /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="modeOfOperation">Mode of Operation:</label><br />
+              <input type="radio" name="modeOfOperation" value="self" checked />
+              Self<br />
+              <input type="radio" name="modeOfOperation" value="anyOne" />
+              Any One<br />
+              <input type="radio" name="modeOfOperation" value="allJointly" />
+              All Jointly<br />
+              <input
+                type="radio"
+                name="modeOfOperation"
+                value="anyTwoJointly"
+              />
+              Any Two Jointly<br />
+              <input
+                type="radio"
+                name="modeOfOperation"
+                value="asPerResolution"
+              />
+              As Per Resolution<br />
+              <input
+                type="text"
+                id="modOthersExpanded"
+                name="modOthersExpanded"
+                placeholder="Other mode of operation"
+                class="form-control"
+              /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="regName">Registration Name:</label>
+              <input
+                type="text"
+                id="regName"
+                name="regName"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="dateOfIncorporation">Date of Incorporation:</label>
+              <input
+                type="date"
+                id="dateOfIncorporation"
+                name="dateOfIncorporation"
+                class="form-control dateinc"
+              />
+            </div>
+            <div class="form-group">
+              <label for="dateOfCommencement">Date of Incorporation:</label>
+              <input
+                type="date"
+                id="dateOfCommencement"
+                name="dateOfCommencement"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="placeOfIncorporation">Place of Incorporation:</label>
+              <input
+                type="text"
+                id="placeOfIncorporation"
+                name="placeOfIncorporation"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="countryCode">Country Code:</label>
+              <input
+                type="text"
+                id="countryCode"
+                name="countryCode"
+                class="form-control"
+                value="IN"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="constitution">Constitution:</label><br />
+              <input type="radio" name="constitution" value="sole" checked />
+              Sole<br />
+              <input type="radio" name="constitution" value="pvtltd" />
+              Pvt Ltd<br />
+              <input type="radio" name="constitution" value="llp" />
+              LLP<br />
+              <input type="radio" name="constitution" value="society" />
+              Society<br />
+              <input type="radio" name="constitution" value="association" />
+              Association<br />
+              <input type="radio" name="constitution" value="partnership" />
+              Partnership<br />
+              <input type="radio" name="constitution" value="huf" />
+              HUF<br />
+              <input type="radio" name="constitution" value="publicLimitedCo" />
+              Public Limited Co<br />
+              <input type="radio" name="constitution" value="trust" />
+              Trust<br />
+              <input type="radio" name="constitution" value="club" />
+              Club<br />
+            </div>
+
+            <div class="form-group">
+              <label for="lineOfBusiness">Line of Business:</label><br />
+              <input type="radio" name="lineOfBusiness" value="agriculture" />
+              Agriculture<br />
+              <input type="radio" name="lineOfBusiness" value="education" />
+              Education<br />
+              <input type="radio" name="lineOfBusiness" value="finance" />
+              Finance<br />
+              <input type="radio" name="lineOfBusiness" value="govt" />
+              Govt<br />
+              <input type="radio" name="lineOfBusiness" value="manufacturing" />
+              Manufacturing<br />
+              <input type="radio" name="lineOfBusiness" value="others" />
+              Others<br />
+              <input
+                type="text"
+                id="lineOfBusinessOther"
+                name="lineOfBusinessOther"
+                placeholder="Other line of business"
+                class="form-control"
+              /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="income">Income:</label><br />
+              <input type="radio" name="income" value="below1" />
+              Below 1<br />
+              <input type="radio" name="income" value="1to5" />
+              1 to 5<br />
+              <input type="radio" name="income" value="5to10" checked />
+              5 to 10<br />
+              <input type="radio" name="income" value="15to25" />
+              15 to 25<br />
+              <input type="radio" name="income" value="above25" />
+              Above 25<br />
+            </div>
+            <div class="form-group">
+              <label for="netWorth">Net Worth:</label>
+              <input
+                type="text"
+                id="netWorth"
+                name="netWorth"
+                class="form-control"
+                value="500000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="netWorthAsOn">Net Worth As On:</label>
+              <input
+                type="date"
+                id="netWorthAsOn"
+                name="netWorthAsOn"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="countryOfBusiness">Country of Business:</label>
+              <input
+                type="text"
+                id="countryOfBusiness"
+                name="countryOfBusiness"
+                class="form-control"
+                value="IN"
+              />
+            </div>
+            <div class="form-group">
+              <label for="countryOfBusiness2">Country of Business 2:</label>
+              <input
+                type="text"
+                id="countryOfBusiness2"
+                name="countryOfBusiness2"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="countryOfBusiness3">Country of Business 3:</label>
+              <input
+                type="text"
+                id="countryOfBusiness3"
+                name="countryOfBusiness3"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address1">Address 1:</label>
+              <input
+                type="text"
+                id="address1"
+                name="address1"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address2">Address 2:</label>
+              <input
+                type="text"
+                id="address2"
+                name="address2"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address3">Address 3:</label>
+              <input
+                type="text"
+                id="address3"
+                name="address3"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                class="form-control"
+                maxlength="14"
+                value="KOTTAYAM"
+              />
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                class="form-control"
+                maxlength="14"
+                value="KERALA"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="pin">PIN:</label>
+              <input type="text" id="pin" name="pin" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile:</label>
+              <input
+                type="text"
+                id="mobile"
+                name="mobile"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="gst">GST:</label>
+              <input type="text" id="gst" name="gst" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="pan">PAN:</label>
+              <input type="text" id="pan" name="pan" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="natureOfActivity">Nature of Activity:</label>
+              <input
+                type="text"
+                id="natureOfActivity"
+                name="natureOfActivity"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="sourceOfFunds">Source of Funds:</label>
+              <input
+                type="text"
+                id="sourceOfFunds"
+                name="sourceOfFunds"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="PrincipalPlaceOfBusiness">Principal Place of Business:</label>
+              <input
+                type="text"
+                id="PrincipalPlaceOfBusiness"
+                name="PrincipalPlaceOfBusiness"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="chequeBookRequest">Cheque Book Request:</label><br />
+              <input
+                type="radio"
+                name="chequeBookRequest"
+                value="yes"
+                checked
+              />
+              Yes<br />
+              <input type="radio" name="chequeBookRequest" value="no" />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="atmRequest">ATM Request:</label><br />
+              <input type="radio" name="atmRequest" value="Yes" checked />
+              Yes<br />
+              <input type="radio" name="atmRequest" value="No" />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="smsRequest">SMS Request:</label><br />
+              <input type="radio" name="smsRequest" value="Yes" checked />
+              Yes<br />
+              <input type="radio" name="smsRequest" value="No" />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="mobileBankingRequest">Mobile Banking Request:</label><br
+              />
+              <input
+                type="radio"
+                name="mobileBankingRequest"
+                value="Yes"
+                checked
+              />
+              Yes<br />
+              <input type="radio" name="mobileBankingRequest" value="No" />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="posRequest">POS Request:</label><br />
+              <input type="radio" name="posRequest" value="Yes" />
+              Yes<br />
+              <input type="radio" name="posRequest" value="No" checked />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="upiPosRequest">UPI POS Request:</label><br />
+              <input type="radio" name="upiPosRequest" value="Yes" />
+              Yes<br />
+              <input type="radio" name="upiPosRequest" value="No" checked />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="internetBankingRequest">Internet Banking Request:</label><br
+              />
+              <input type="radio" name="internetBankingRequest" value="Yes" />
+              Yes<br />
+              <input
+                type="radio"
+                name="internetBankingRequest"
+                value="No"
+                checked
+              />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="creditFacilityEnjoy">Credit Facility Enjoy:</label><br
+              />
+              <input
+                type="radio"
+                name="creditFacilityEnjoy"
+                value="notEnjoying"
+                checked
+              />
+              Not Enjoying<br />
+              <input type="radio" name="creditFacilityEnjoy" value="Enjoying" />
+              Enjoying<br />
+            </div>
+
+            <div class="form-group">
+              <label for="proprietorName">Proprietor Name:</label>
+              <input
+                type="text"
+                id="proprietorName"
+                name="proprietorName"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="initialRemittance">Initial Remittance:</label><br />
+              <input type="radio" name="initialRemittance" value="cash" />
+              Cash<br />
+              <input type="radio" name="initialRemittance" value="cheque" />
+              Cheque<br />
+              <input type="radio" name="initialRemittance" value="transfer" />
+              Transfer<br />
+              <input type="radio" name="initialRemittance" value="neft" />
+              NEFT<br />
+              <input type="radio" name="initialRemittance" value="others" />
+              Others<br />
+            </div>
+
+            <div class="form-group">
+              <label for="ipAmount">IP Amount:</label>
+              <input
+                type="text"
+                id="ipAmount"
+                name="ipAmount"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="remittingBranch">Remitting Branch:</label>
+              <input
+                type="text"
+                id="remittingBranch"
+                name="remittingBranch"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="chequeDate">Cheque Date:</label>
+              <input
+                type="date"
+                id="chequeDate"
+                name="chequeDate"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nominationRequired">Nomination Required:</label><br />
+              <input
+                type="radio"
+                name="nominationRequired"
+                value="yes"
+                checked
+              />
+              Yes<br />
+              <input type="radio" name="nominationRequired" value="no" />
+              No<br />
+            </div>
+
+            <div class="form-group">
+              <label for="nomineeNameAndAddress">Nominee Name and Address:</label>
+              <input
+                type="text"
+                id="nomineeNameAndAddress"
+                name="nomineeNameAndAddress"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nomineeRelation">Nominee Relation:</label>
+              <input
+                type="text"
+                id="nomineeRelation"
+                name="nomineeRelation"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="place">Place:</label>
+              <input
+                type="text"
+                id="place"
+                name="place"
+                class="form-control"
+                value="CHANGANACHERRY"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="proprietorAddress">Proprietor Address:</label>
+              <input
+                type="text"
+                id="proprietorAddress"
+                name="proprietorAddress"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="branchAddress">Branch Address:</label>
+              <input
+                type="text"
+                id="branchAddress"
+                name="branchAddress"
+                class="form-control"
+                value="SANJOS PLAZA, OPP. SB COLLEGE, CHANGANACHERRY, KOTTAYAM, 686101"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="canvacedPPC">Canvaced PPC:</label>
+              <input
+                type="text"
+                id="canvacedPPC"
+                name="canvacedPPC"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="fatherName">Father's Name:</label>
+              <input
+                type="text"
+                id="fatherName"
+                name="fatherName"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="motherName">Mother's Name:</label>
+              <input
+                type="text"
+                id="motherName"
+                name="motherName"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="spouseName">Spouse's Name:</label>
+              <input
+                type="text"
+                id="spouseName"
+                name="spouseName"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="dateOfBirth">Date of Birth:</label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="community">Community:</label>
+              <input
+                type="text"
+                id="community"
+                name="community"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="aadhar">Aadhar:</label>
+              <input
+                type="text"
+                id="aadhar"
+                name="aadhar"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label>Maritial Status:</label><br />
+              <label>
+                <input type="radio" name="maritialStatus" value="yes" />
+                Yes
+              </label>
+              <label>
+                <input type="radio" name="maritialStatus" value="no" />
+                No
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Gender:</label><br />
+              <label>
+                <input type="radio" name="gender" value="male" />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" />
+                Female
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="proprietorAddress1AOF">Proprietor Address Line 1:</label>
+              <input
+                type="text"
+                id="proprietorAddress1AOF"
+                name="proprietorAddress1AOF"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+            <div class="form-group">
+              <label for="proprietorAddress2AOF">Proprietor Address Line 2:</label>
+              <input
+                type="text"
+                id="proprietorAddress2AOF"
+                name="proprietorAddress2AOF"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+            <div class="form-group">
+              <label for="proprietorAddress3AOF">Proprietor Address Line 3:</label>
+              <input
+                type="text"
+                id="proprietorAddress3AOF"
+                name="proprietorAddress3AOF"
+                class="form-control"
+                maxlength="17"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="proprietorAddressStateAOF">Proprietor Address State:</label>
+              <input
+                type="text"
+                id="proprietorAddressStateAOF"
+                name="proprietorAddressStateAOF"
+                class="form-control"
+                value="KERALA"
+              />
+            </div>
+            <div class="form-group">
+              <label for="proprietorAddressPINAOF">Proprietor Address PIN:</label>
+              <input
+                type="text"
+                id="proprietorAddressPINAOF"
+                name="proprietorAddressPINAOF"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label>Premises Type:</label><br />
+              <label>
+                <input type="radio" name="premisesType" value="ownedOrleased" checked />
+                Owned or Leased
+              </label><br />
+              <label>
+                <input
+                  type="radio"
+                  name="premisesType"
+                  value="standalonOrShoppincomplex"
+                />
+                Standalone or Shopping Complex
+              </label>
+            </div>
+            {{! //////cif id create form fields }}
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for some functionalities) -->
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+branchName,branchCode,
+
+radio button group scheme [CApremium,CASmart,CATraderSmart,CAOthers],
+schemeOthersExpanded,
+radio button group modeOfOperation [self,anyOne,allJointly,anyTwoJointly,asPerResolution,modOthers],
+modOthersExpanded,
+regName,dateOfIncorporation,placeOfIncorporation,countryCode,
+radio button group Constitution: [sole,pvtltd,llp,society,association,sole,partnership,huf,publicLimitedCo,trust,club]
+radio button group lineOfBusiness: [agriculture,education,finance,govt,manufacturing,others,hospital,softwareIT,restaurants,transport,trade,lineOther],
+lineOfBusinessOther,
+radiobutton group income: [below1,1to5,5to10,15to25, above25],
+netWorth,netWorthAsOn, countryOfBusiness, countryOfBusiness2,countryOfBusiness3,address1,address2,address3,
+city,state,pin,mobile,email,gst,pan,natureOfActivity,sourceOfFunds,PrincipalPlaceOfBusiness,
+radio button group chequeBookRequest [yes,no],
+radio button group atmRequest [Yes,No],
+radio button group smsRequest [Yes,No],
+radio button group mobileBankingRequest [Yes,No],
+radio button group posRequest [Yes,No],
+radio button group upiPosRequest [Yes,No],
+radio button group internetBankingRequest [Yes,No],
+radio button group creditFacilityEnjoy [notEnjoying,Enjoying],
+proprietorName,
+radio button group InitialRemittance [cash,cheque,transfer,neft,others],
+ipAmount,remittingBranch,chequeDate,
+radio button group nominationRequired [yes,no],
+nomineeNameAndAddress,nomineeRelation,place,date,proprietorAddress,branchAddress,
+canvacedPPC
+
+cif id create form:
+fatherName,motherName,spouseName,dateOfBirth,community,
+aadhar,
+radio button group : maritialStatus [yes,no],
+radio button group: gender [male,female],
+proprietorAddress1AOF,proprietorAddress2AOF,proprietorAddress3AOF,
+proprietorAddressStateAOF,proprietorAddressPINAOF
+
+
+font size 9, spacing 4, font helvetica    
+in case of dates: 4454454444
+
+AOF,POSS,POSL
