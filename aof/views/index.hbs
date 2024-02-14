@@ -28,7 +28,7 @@
                 id="branchName"
                 name="branchName"
                 class="form-control"
-                
+                onchange="convertToUpperCase()"
               />
             </div>
             <div class="form-group">
@@ -766,6 +766,12 @@
     // Set default value for the input field
     document.getElementById('netWorthAsOn').value = formattedDate;
     document.getElementById('date').value = formattedDate;
+
+    function convertToUpperCase() {
+    const inputElement = document.getElementById('myInput');
+    inputElement.value = inputElement.value.toUpperCase();
+}
+
 </script>
   </body>
 </html>
