@@ -192,6 +192,9 @@ splitTextIntoShortBoxes(req.body.proprietorAddressPINAOF.toUpperCase(),"propriet
 form.getRadioGroup("premisesType").select(req.body.premisesType);
 const qrCode = "QR." + req.body.regName + "@SIB";
 form.getTextField("qrCode").setText(qrCode.toUpperCase());
+form.getTextField("cordinates").setText(req.body.cordinates);
+form.getTextField("employeeCount").setText(req.body.employeeCount);
+
 
 
 
@@ -284,9 +287,10 @@ function splitDate(dateString) {
     fs.writeFileSync("filled_form.pdf", filledPdfBytes);
 
     res.download("filled_form.pdf"); // Send the filled PDF as a download
+    
   } catch (error) {
     console.error("Error:", error);
-    res.status(500).send("Internal Server Error");
+    res.status(500).send("Data error, kindly check the data entered.");
   }
 });
 
