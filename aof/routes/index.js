@@ -74,7 +74,7 @@ const pin = req.body.pin.toUpperCase() || "";
 const fullAddress = `${address1}, ${address2}, ${address3}, ${city}, ${state}, ${pin}`;
 
 form.getTextField("fullAddress").setText(fullAddress);
-form.getTextField("fullAddressSingleLine").setText(fullAddress);
+// form.getTextField("fullAddressSingleLine").setText(fullAddress);
 // form.getTextField("address1").setText(req.body.address1);
 // form.getTextField("address2").setText(req.body.address2);
 // form.getTextField("address3").setText(req.body.address3);
@@ -151,6 +151,16 @@ form.getTextField("branchAddress").setText(req.body.branchAddress.toUpperCase())
 splitTextIntoShortBoxes(req.body.proprietorName.toUpperCase(),"proprietorName")
 splitTextIntoShortBoxes(req.body.aadhar,"aadhar")
 
+
+
+const proprietorAddress1 = req.body.proprietorAddress1AOF.toUpperCase() || "";
+const proprietorAddress2 = req.body.proprietorAddress2AOF.toUpperCase() || "";
+const proprietorAddress3 = req.body.proprietorAddress3AOF.toUpperCase() || "";
+const proprietorState = req.body.proprietorAddressStateAOF.toUpperCase() || "";
+const proprietorAddressPINAOF = req.body.proprietorAddressPINAOF.toUpperCase() || "";
+
+const proprietorFullAddress = `${proprietorAddress1}, ${proprietorAddress2}, ${proprietorAddress3}, ${proprietorState}, ${proprietorAddressPINAOF}`;
+form.getTextField("proprietorFullAddress").setText(proprietorFullAddress);
 // form.getTextField("proprietorNameAOF").setText(addSpacesAfterCharactersAOF(req.body.proprietorName));
 // form.getTextField("proprietorAddress1AOF").setText(addSpacesAfterCharactersAOF(req.body.proprietorAddress1AOF));
 // form.getTextField("proprietorAddress2AOF").setText(addSpacesAfterCharactersAOF(req.body.proprietorAddress2AOF));
