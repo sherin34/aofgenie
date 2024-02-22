@@ -201,10 +201,20 @@ splitTextIntoShortBoxes(req.body.proprietorAddressPINAOF.toUpperCase(),"propriet
 // form.getTextField("proprietorAddressPINAOF").setText(addSpacesAfterCharactersAOF(req.body.proprietorAddressPINAOF));
 form.getRadioGroup("premisesType").select(req.body.premisesType);
 const qrCode = "QR." + req.body.regName + "@SIB";
-form.getTextField("qrCode").setText(qrCode.toUpperCase());
+// form.getTextField("qrCode").setText(qrCode.toUpperCase());
 form.getTextField("cordinates").setText(req.body.cordinates);
 form.getTextField("employeeCount").setText(req.body.employeeCount);
+////for cpv
 
+form.getTextField("totalExperienceYears").setText(req.body.totalExperienceYears);
+form.getTextField("totalExperienceMonths").setText(req.body.totalExperienceMonths);
+form.getTextField("yearsInLocation").setText(req.body.yearsInLocation);
+form.getTextField("monthsInLocation").setText(req.body.monthsInLocation);
+form.getTextField("ppcCPV").setText(req.body.ppcCPV);
+form.getTextField("nameCPV").setText(req.body.nameCPV.toUpperCase());
+form.getTextField("designationCPV").setText(req.body.designationCPV.toUpperCase());
+form.getTextField("dateCPV").setText(formatDate2(req.body.dateCPV));
+form.getTextField("timeCPV").setText((req.body.timeCPV));
 
 
 
